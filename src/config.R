@@ -10,9 +10,3 @@ install.packages("randomForest")
 install.packages("caret")
 install.packages("e1071")
 
-
-zipF <- "src/model.zip"
-outDir <-"src/"
-
-unzip(zipF,exdir=outDir)
-
