@@ -23,3 +23,5 @@ For example,
 ``` R
 Rscript ./geneRFinder.R -i ./example/final.contigs.fa -o genes -t 7 -s 1
 ``` 
+
+Please, use GitClone to download.
