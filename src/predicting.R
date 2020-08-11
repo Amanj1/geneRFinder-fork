@@ -1,6 +1,6 @@
-require(caret)
 #model
-load("./src/model.RData")
+modelFile <- paste0(dir, "/src/model.RData")
+load(modelFile)
 
 #custom <- readRDS('./src/model.RData')
 
