@@ -50,9 +50,21 @@ fileDir <- opt$input
 # Type of start codon
 startC <- as.numeric(opt$start)
 
-source("./src/functions.R")
-source("./src/readFastaFile.R")
-source("./src/getTableFeatures.R")
-source("./src/predicting.R")
+this_file = gsub("--file=", "", commandArgs()[grepl("--file", commandArgs())])
+if (length(this_file) > 0){
+  wd <- paste(head(strsplit(this_file, '[/|\\]')[[1]], -1), collapse = .Platform$file.sep)
+}else{
+  wd <- dirname(rstudioapi::getSourceEditorContext()$path)
+}
+
+dir <- wd
 
 
+loadF <- paste0(dir, "/src/functions.R")
+source(loadF)
+readfileF <- paste0(dir, "/src/readFastaFile.R")
+source(readfileF)
+getFeatF <- paste0(dir, "/src/getTableFeatures.R")
+source(getFeatF)
+predF <- paste0(dir, "/src/predicting.R")
+source(predF)
