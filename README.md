@@ -30,4 +30,4 @@ For example,
 Rscript ./geneRFinder.R -i ./example/final.contigs.fa -o output -t 7 -s 1 -n 1
 ``` 
 
-Please, download the src/model.RData file separately.
+Please, download the src/model.RData file separately, it is a large file.
