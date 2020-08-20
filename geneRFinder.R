@@ -22,7 +22,9 @@ option_list = list(
   make_option(c("-o", "--out"), type="character", default="genes", 
               help="Output File Name [default= %default]", metavar="character"),
   make_option(c("-s", "--start"), type="integer", default=1, 
-              help="Type of start codon", metavar="integer")
+              help="Type of start codon", metavar="integer"),
+  make_option(c("-int", "--intergenic"), type="integer", default=1, 
+              help="Intergenics sequences", metavar="integer", default=0)
   
 ); 
 
@@ -49,6 +51,9 @@ fileDir <- opt$input
 
 # Type of start codon
 startC <- as.numeric(opt$start)
+
+#Output with intergenic
+non <- as.numeric(opt$intergenic)
 
 this_file = gsub("--file=", "", commandArgs()[grepl("--file", commandArgs())])
 if (length(this_file) > 0){
