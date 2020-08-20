@@ -29,7 +29,8 @@ write.fasta(sequences = tableSeq, names = names(tableSeq), nbchar = 80, file.out
 
 if(non == 0){
   print("Completed")
-}else{
+}
+if(non == 2){
   folder_and_name = paste0(id,"_intergenics.fasta")
   tableSeq <- data.frame(tableSequencesNO)
   tableSeq <- setNames(split(tableSeq[,1], seq(nrow(tableSeq))), rownames(tableSeq))

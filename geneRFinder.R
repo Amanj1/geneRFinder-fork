@@ -24,7 +24,7 @@ option_list = list(
   make_option(c("-s", "--start"), type="integer", default=1, 
               help="Type of start codon", metavar="integer"),
   make_option(c("-int", "--intergenic"), type="integer", default=1, 
-              help="Intergenics sequences", metavar="integer", default=0)
+              help="Intergenics sequences", metavar="integer")
   
 ); 
 
