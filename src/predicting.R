@@ -18,12 +18,12 @@ predictClass <- as.data.frame(predictClass)
 
 tableSequences <- cbind(tableSequences, predictClass)
 
-tableSequences <- tableSequences[which(tableSequences$predictClass == "yes") ,]
+tableSequencesYES <- tableSequences[which(tableSequences$predictClass == "yes") ,]
 tableSequencesNO <- tableSequences[which(tableSequences$predictClass == "no") ,]
 
 folder_and_name = paste0(id,"_genes.fasta")
 
-tableSeq <- data.frame(tableSequences)
+tableSeq <- data.frame(tableSequencesYES)
 tableSeq <- setNames(split(tableSeq[,1], seq(nrow(tableSeq))), rownames(tableSeq))
 write.fasta(sequences = tableSeq, names = names(tableSeq), nbchar = 80, file.out = folder_and_name)
 
