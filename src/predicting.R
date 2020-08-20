@@ -21,13 +21,13 @@ tableSequences <- cbind(tableSequences, predictClass)
 tableSequences <- tableSequences[which(tableSequences$predictClass == "yes") ,]
 tableSequencesNO <- tableSequences[which(tableSequences$predictClass == "no") ,]
 
-folder_and_name = paste0(id,".fasta")
+folder_and_name = paste0(id,"_genes.fasta")
 
 tableSeq <- data.frame(tableSequences)
 tableSeq <- setNames(split(tableSeq[,1], seq(nrow(tableSeq))), rownames(tableSeq))
 write.fasta(sequences = tableSeq, names = names(tableSeq), nbchar = 80, file.out = folder_and_name)
 
-if(non == 0){
+if(non == 1){
   print("Completed")
 }
 if(non == 2){
@@ -37,8 +37,6 @@ if(non == 2){
   write.fasta(sequences = tableSeq, names = names(tableSeq), nbchar = 80, file.out = folder_and_name)
   print("Completed")
 }
-
-
 
 
 
