@@ -9,7 +9,7 @@ Rscript ./src/config.R
 
 To run geneRFinder, 
 ``` R
-Rscript ./geneRFinder.R -i [fasta_file_name] -o [output_file_name] -t [thread_number] -s [type_start] -n [intergenic]
+Rscript ./geneRFinder.R -i [fasta_file_name] -o [output_file_name] -t [thread_number] -s [start_type] -n [intergenic]
 ``` 
 
 <br />
@@ -22,7 +22,7 @@ Rscript ./geneRFinder.R -i [fasta_file_name] -o [output_file_name] -t [thread_nu
 [thread_number]: number of thread
 
 <br />
-[type_start]: <br />
+[start_type]: <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 - if start codon is ATG <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 - if start codon is ATG, GTG and TTG <br />
 
