@@ -13,8 +13,10 @@ Rscript ./geneRFinder.R -i [fasta_file_name] -o [output_file_name] -t [thread_nu
 ``` 
 [fasta_file_name]: input file name
 <br />
+
 [output_file_name]: output file name
 <br />
+
 [thread_number]: number of thread
 
 <br />
