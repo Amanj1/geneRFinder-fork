@@ -21,6 +21,7 @@ Rscript ./geneRFinder.R -i [fasta_file_name] -o [output_file_name] -t [thread_nu
 
 [thread_number]: number of thread
 <br />
+
 [type_start]: <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 - if start codon is ATG <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 - if start codon is ATG, GTG and TTG <br />
