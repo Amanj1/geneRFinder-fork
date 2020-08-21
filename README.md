@@ -11,21 +11,20 @@ To run geneRFinder,
 ``` R
 Rscript ./geneRFinder.R -i [fasta_file_name] -o [output_file_name] -t [thread_number] -s [type_start] -n [intergenic]
 ``` 
-<br />
 
+<br />
 [fasta_file_name]: input file name
-<br />
 
+<br />
 [output_file_name]: output file name
-<br />
 
+<br />
 [thread_number]: number of thread
-<br />
 
+<br />
 [type_start]: <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 - if start codon is ATG <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 - if start codon is ATG, GTG and TTG <br />
-<br />
 
 <br />
 [intergenic]: <br />
