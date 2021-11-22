@@ -39,3 +39,14 @@ Rscript ./geneRFinder.R -i ./example/final.contigs.fa -o output -t 7 -s 1 -n 1
 ``` 
 
 Please, download the src/model.RData file separately, it is a large file.
+
+
+## Usage
+
+In the output there are for each sequence:
+>[random_id], [sequence_length],[contig_id]
+[sequence]
+
+Example:
+>34, len=63, k121_33 flag=1 multi=2.0000 len=501
+ATGATAAAAGCGCGCGTCAGGTACGGCTCGTCGCCGCCGGCAATGCCTATGCGGTCACGCTAA
