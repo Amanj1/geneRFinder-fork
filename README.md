@@ -41,13 +41,26 @@ Rscript ./geneRFinder.R -i ./example/final.contigs.fa -o output -t 7 -s 1 -n 1
 Please, download the src/model.RData file separately, it is a large file.
 
 
-## Usage
+## Output
 
 In the output there are for each sequence:
 ```
->[random_id], [sequence_length],[contig_id] <br />
+>[random_id], [sequence_length],[contig_id]
 [sequence]
 ```
+<br />
+[random_id]: a random id, just for control
+
+<br />
+[sequence_length]: length of the sequence
+
+<br />
+[contig_id]: the id from the contig 
+
+<br />
+[sequence]: the gene or intergenic generated
+
+<br />
 
 Example:
 ```
