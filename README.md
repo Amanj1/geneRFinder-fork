@@ -49,7 +49,7 @@ In the output there are for each sequence:
 [sequence]
 ```
 <br />
-[random_id]: a random id, just for control
+[random_id]: a random id, for control
 
 <br />
 [sequence_length]: length of the sequence
@@ -62,6 +62,7 @@ In the output there are for each sequence:
 
 <br />
 
+<br />
 Example:
 ```
 >34, len=63, k121_33 flag=1 multi=2.0000 len=501
