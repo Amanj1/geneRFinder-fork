@@ -293,6 +293,7 @@ orfsFromSequences<- function(sequences, needSubOrfs, startC, minlength){
       stopPosition<- startPositions + lengths -1
       
       orfSequence <- as.matrix(substring(seq, first = startPositions, last  = stopPosition))
+      tableOrfs <- cbind(orfSequence, sequences[j,"contig"])
     }
     colnames(tableOrfs)<- "sequence"
     tableOrfs <- as.data.frame(tableOrfs)
@@ -317,8 +318,9 @@ orfsFromSequences<- function(sequences, needSubOrfs, startC, minlength){
       
       
       orfSequence <- as.matrix(substring(seq, first = startPositions, last  = stopPosition))
+      tableOrfs <- cbind(orfSequence, sequences[j,"contig"])
     }
-    colnames(tableOrfs)<- "sequence"
+    colnames(tableOrfs)<- c("sequence", "contig")
     tableOrfs <- as.data.frame(tableOrfs, stringsAsFactors = FALSE)
     sequencesNumber <- as.data.frame(rownames(tableOrfs), stringsAsFactors = FALSE)
     colnames(sequencesNumber)<- "seq"
@@ -508,13 +510,14 @@ getFeatures <- function(tableSequences){
   pentamer <- extractPentamer(tableSequences)
   hexamer <- extractHexamer(tableSequences)
   c_weight <- extractC_weight(tableSequences)
+  contigid <- tableSequences$contig
   class <- tableSequences$class
   
-  tableFeatures<- cbind(GC, GC1, GC2, GC3, length, dimer, trimer, tetramer, pentamer, hexamer, c_weight, class)
+  tableFeatures<- cbind(GC, GC1, GC2, GC3, length, dimer, trimer, tetramer, pentamer, hexamer, c_weight, contigid, class)
   tableFeatures <- as.data.frame(tableFeatures)
   
   colnames(tableFeatures) <- c("GC", "GC1", "GC2", "GC3", "length", "dimer", "trimer", "tetramer", "pentamer", 
-                               "hexamer", "c_weight", "class")
+                               "hexamer", "c_weight", "contig", "class")
   
   #########converte
   tableFeatures$GC <- as.numeric(as.character(tableFeatures$GC))
