@@ -64,6 +64,7 @@ In the output there are for each sequence:
 
 <br />
 Example:
+
 ```
 >34, len=63, k121_33 flag=1 multi=2.0000 len=501
 ATGATAAAAGCGCGCGTCAGGTACGGCTCGTCGCCGCCGGCAATGCCTATGCGGTCACGCTAA
