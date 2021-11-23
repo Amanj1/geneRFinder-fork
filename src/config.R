@@ -9,4 +9,5 @@ install.packages("parallel")
 install.packages("randomForest")
 install.packages("caret")
 install.packages("e1071")
+install.packages("phylotools")
 
