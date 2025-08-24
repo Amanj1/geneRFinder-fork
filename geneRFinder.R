@@ -54,21 +54,20 @@ startC <- as.numeric(opt$start)
 #Output with intergenic
 non <- as.numeric(opt$intergenic)
 
-this_file = gsub("--file=", "", commandArgs()[grepl("--file", commandArgs())])
-if (length(this_file) > 0){
-  wd <- paste(head(strsplit(this_file, '[/|\\]')[[1]], -1), collapse = .Platform$file.sep)
-}else{
-  wd <- dirname(rstudioapi::getSourceEditorContext()$path)
+this_file <- gsub("--file=", "", commandArgs()[grepl("--file", commandArgs())])
+if (length(this_file) > 0) {
+  dir <- dirname(normalizePath(this_file))
+} else {
+  dir <- getwd()
 }
 
-dir <- wd
 
 
-loadF <- paste0(dir, "/src/functions.R")
+loadF <- file.path(dir,"src","functions.R")
 source(loadF)
-readfileF <- paste0(dir, "/src/readFastaFile.R")
+readfileF <- file.path(dir,"src","readFastaFile.R")
 source(readfileF)
-getFeatF <- paste0(dir, "/src/getTableFeatures.R")
+getFeatF <- file.path(dir,"src","getTableFeatures.R")
 source(getFeatF)
-predF <- paste0(dir, "/src/predicting.R")
+predF <- file.path(dir,"src","predicting.R")
 source(predF)
