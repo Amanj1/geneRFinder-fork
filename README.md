@@ -1,3 +1,20 @@
+# geneRFinder (forked & fixed)
+
+This is a **fork** of the original [railorena/geneRFinder](https://github.com/railorena/geneRFinder).
+
+### Fixes:
+- Robust path handling (`file.path(...)` instead of absolute `/src/`).
+- Removed dependency on `rstudioapi` (works with `Rscript` on CLI).
+- Confirmed working with `Rscript geneRFinder.R -i input.fa -o output -t 4 -s 2 -n 2`.
+
+### License
+GPL-3.0 (same as original paper).
+
+---
+
+This fork is used in viral discovery pipeline. It is not the official upstream.
+
+
 ## Installation
 
 To install geneRFinder, please running the script follow:
